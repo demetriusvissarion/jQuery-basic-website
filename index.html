@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+
+    <script>
+      $(function () {
+        $("#panel1").hide(1000).delay(1000).show(1000);
+        $("#panel2")
+          .slideUp(1000)
+          .delay(1000)
+          .slideDown(1000)
+          .slideToggle(1000)
+          .slideToggle(1000);
+        // $("#panel3")
+        //   .fadeOut(1000)
+        //   .fadeIn(1000)
+        //   .fadeToggle(1000)
+        //   .fadeToggle(1000);
+        $("#panel3").css({ opacity: "0" }).delay(1000).css({ opacity: "0.5" });
+        $("#panel4").toggle(1000).toggle(1000);
+
+        $("#panel1").css({
+          color: "red",
+          fontWeight: "bold",
+          "font-size": "2rem",
+        });
+
+        let buttons = $("button");
+        // alert(buttons.length);
+
+        let button1 = $("button#btn1");
+        alert(button1.length);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Let's Have Fun!</h1>
+        <button id="btn1">#btn1</button>
+        <button id="btn2">#btn2</button>
+        <button id="btn3">#btn3</button>
+        <button id="btn4">#btn4</button>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">
+          <div id="panel1" class="panel panel-primary">
+            <div class="panel-heading">#panel1</div>
+            <div class="panel-body">content</div>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="panel2" class="panel panel-primary">
+            <div class="panel-heading">#panel2</div>
+            <div class="panel-body">content</div>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="panel3" class="panel panel-primary">
+            <div class="panel-heading">#panel3</div>
+            <div class="panel-body">content</div>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="panel4" class="panel panel-primary">
+            <div class="panel-heading">#panel4</div>
+            <div class="panel-body">content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p data-attr="bar">Attributes</p>
+      <p class="foo">This was added</p>
+    </div>
+  </body>
+</html>
