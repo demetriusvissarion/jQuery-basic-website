@@ -36,7 +36,11 @@
         // alert(buttons.length);
 
         let button1 = $("button#btn1");
-        alert(button1.length);
+        // alert(button1.length);
+
+        let attribute = $("[data-attr='bar']"); // jQuery object
+        attribute.css("color", "blue");
+        alert(attribute.length);
       });
     </script>
   </head>
